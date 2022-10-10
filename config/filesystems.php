@@ -43,6 +43,24 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
+        'logos_companies' => [
+            'driver' => 'local',
+            'root' => storage_path('app/logos_companies'),
+            'url' => env('APP_URL') . '/logos_companies',
+            'visibility' => 'public',
+        ],
+        'products' => [
+            'driver' => 'local',
+            'root' => storage_path('app/products'),
+            'url' => env('APP_URL') . '/products',
+            'visibility' => 'public',
+        ],
+        'avatars' => [
+            'driver' => 'local',
+            'root' => storage_path('app/avatars'),
+            'url' => env('APP_URL') . '/avatars',
+            'visibility' => 'public',
+        ],
 
         's3' => [
             'driver' => 's3',
@@ -71,6 +89,9 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('logos_companies') => storage_path('app/logos_companies'),
+        public_path('products') => storage_path('app/products'),
+        public_path('avatars') => storage_path('app/avatars'),
     ],
 
 ];
