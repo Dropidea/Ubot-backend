@@ -76,4 +76,14 @@ class AuthController extends Controller
             'expires_in' => auth('auth:api_admin')->factory()->getTTL() * 60
         ]);
     }
+
+    /**
+     * change_password
+     *
+     * @return void
+     */
+    public function change_password()
+    {
+        # code...
+    }
 }

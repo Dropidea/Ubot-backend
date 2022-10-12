@@ -24,10 +24,33 @@ class Admin extends Authenticatable implements JWTSubject
     protected $table = 'admins';
 
 
+    /**
+     * casts
+     *
+     * @var array
+     */
+    protected $casts = [
+        "status" => "boolean"
+    ];
+
+
+    /**
+     * hidden
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+
     /* -------------------------------------------------------------------------- */
     /*                                  constants                                 */
     /* -------------------------------------------------------------------------- */
 
+    public const STATUS_DISACTIVE = 0;
+    public const STATUS_ACTIVE = 1;
 
 
 
